@@ -1,0 +1,1 @@
+custom_script_server=0:scripts\\ai\\test.lua

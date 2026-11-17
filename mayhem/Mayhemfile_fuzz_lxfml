@@ -1,0 +1,9 @@
+project: savantenvs/DarkflameServer
+target: fuzz-lxfml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-lxfml/testsuite
+cmds:
+  - cmd: /mayhem/build/bin/fuzz_lxfml
+    libfuzzer: true
+    timeout: 5

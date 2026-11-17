@@ -1,0 +1,9 @@
+project: savantenvs/DarkflameServer
+target: fuzz-chatfilter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-chatfilter/testsuite
+cmds:
+  - cmd: /mayhem/build/bin/fuzz_chatfilter
+    libfuzzer: true
+    timeout: 5

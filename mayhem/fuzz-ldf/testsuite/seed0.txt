@@ -1,0 +1,1 @@
+KEY=0:IAmA weird string with :::: and spaces

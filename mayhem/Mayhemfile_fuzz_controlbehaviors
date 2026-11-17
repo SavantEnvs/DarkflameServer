@@ -1,0 +1,9 @@
+project: savantenvs/DarkflameServer
+target: fuzz-controlbehaviors
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-controlbehaviors/testsuite
+cmds:
+  - cmd: /mayhem/build/bin/fuzz_controlbehaviors
+    libfuzzer: true
+    timeout: 5

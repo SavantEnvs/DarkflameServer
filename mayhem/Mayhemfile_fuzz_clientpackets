@@ -1,0 +1,9 @@
+project: savantenvs/DarkflameServer
+target: fuzz-clientpackets
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-clientpackets/testsuite
+cmds:
+  - cmd: /mayhem/build/bin/fuzz_clientpackets
+    libfuzzer: true
+    timeout: 5

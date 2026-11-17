@@ -1,0 +1,9 @@
+project: savantenvs/DarkflameServer
+target: fuzz-auth
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-auth/testsuite
+cmds:
+  - cmd: /mayhem/build/bin/fuzz_auth
+    libfuzzer: true
+    timeout: 5
